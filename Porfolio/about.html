@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WATCHY WATCH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcxfKgxzB0_L4F1e0_eLT29A7xs9t4oirX3g&s">
+    <link rel="stylesheet" href="boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <head>
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <!-- or -->
+        <link rel="stylesheet"
+        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+      </head>
+      <style>
+       
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header{
+            padding: 0 5%;
+            border-radius: 25px;
+            top: 5%;
+            right: 5%;
+            bottom: 85%;
+            left: 5%;
+            position: fixed;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background-color: whitesmoke;
+            align-items: center;
+            z-index: 112;
+        
+            
+        }
+        .Nav{
+           
+           justify-content: space-between;
+        list-style: none;
+        display: flex;
+        
+        }
+        .Nav li a{
+            border-bottom: 3px solid black transparent;
+            transition:all 0.15s linear;
+            font-weight: bolder;
+        }
+        .Nav li a:hover{
+            color: rgb(124, 119, 119);
+           padding-left: 5%;
+           
+            border-bottom: 1px solid black;
+            
+            
+        }
+        a{
+            text-decoration: none;
+            font-family: verdana;
+            color: black;
+            
+
+        }
+        .log{
+            margin: 0 auto;
+
+        }
+        label{
+            display: none;
+        }
+        input[type="checkbox"]{
+            display: none;
+           
+        }
+
+        @media  screen and (max-width:596px) {
+            label{
+                text-align: right;
+                display: contents;
+                cursor: pointer;
+                
+            }
+            .Nav{
+                position: fixed;
+                flex-direction: column;
+                background-color: white;
+                padding: 3% 5%;
+                top: 17%;
+                
+                opacity: 0;
+                visibility: hidden;
+                z-index: 0;
+                transition: all 0.2s ease;
+                border-radius:5px;
+                
+                
+            }
+           .Nav li {
+            line-height: 200%;
+            margin-bottom:1rem;
+            }
+            #check:checked ~ .Nav{
+                visibility: visible;
+               opacity: 1;
+                z-index: 110;
+                
+            }
+            
+        }
+        .container{
+           background: linear-gradient(#0F2027,#203A43,#2C5364);
+            height: 30vh;
+            width: 100%;
+            display: grid;
+            grid-template-columns:repeat(2,1fr) ;
+            
+            margin: 0 auto;
+        }
+        .photo,.text{
+
+
+        
+            position: relative;
+        }
+        .abs,.img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%); 
+        }
+        .abs h2,h3,h4,h5{
+            font-family:Kanit;
+            font-size: xx-large;
+        }
+        .abs button{
+            margin: 15px 15px 0 0;
+            width: 150px;
+            height: 55px;
+            border-radius: 25px 0 25px 0;
+            display: inline;
+            border: none;
+            background-color: white;
+            font: 1rem poppins;
+            color: #203A43;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+        .abs button:nth-child(even){
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        .abs button:nth-child(even):hover{
+            color: #203A43;
+            background-color: white;
+        }
+        .img img{
+            width: 100%;
+
+        }
+       
+        @media screen and (max-width:647px) {
+            .container{
+                grid-template-columns: 1fr;
+              
+                
+            }
+            .abs h2,h3,h4,h5{
+                font-size: 2.5rem;
+            }
+            .abs{
+                top:40%;
+                left: 15%;
+               transform: translate(0%,0%);
+               z-index: 100;
+            }
+           .img{
+            margin:8% 0;
+           }
+        }
+        .services{
+            height: ;
+            display: grid;
+            padding: 5% 0;
+            grid-template-columns: 20% 20% 20% 20%;
+            justify-content: space-around;
+        }
+        .serve{
+            text-align: center;
+            
+        }
+        .serve i{
+            font-size: 300%;
+            transition: all 0.28s ease;
+        }
+        .serve h6{
+            font-size: large;
+            font-weight: bold;
+            font-family: var(--edu--);
+        }
+        .serve p{
+            font-family: var(--rob--);
+            color: grey;
+            
+        }
+        .serve button{
+            margin-top: 10%;
+        }
+        .serve button{
+            font:14px poppins;
+            white-space: nowrap;
+            padding: 5% 5%;
+            border: 2px solid #28dbd2;
+            background-color: white;
+            border-radius:25px ;
+            cursor: pointer;
+            transition: all 0.28s linear;
+        }
+        .serve button:hover{
+            color: white;
+            background-color: #28dbd2;
+            font-weight: bold;
+            transform: translateX(5%);
+        }
+        .serve:nth-of-type(2) i:hover{
+            color: yellowgreen;
+            transform: translateY(-5%);
+        }
+        .serve:nth-of-type(1) i:hover{
+            color: red;
+            transform: translateY(-5%);
+        }  .serve:nth-of-type(3) i:hover{
+            color: green;
+            transform: translateY(-5%);
+        }  .serve:nth-of-type(4) i:hover{
+            color: blue;
+            transform: translateY(-5%);
+        }        
+        
+        /*----------------ABOUT PAGE-----------------*/
+        .about{
+            height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        
+
+        }
+        .shop-img{
+            display: flex;
+            
+            justify-content: center;
+ 
+        }
+        .shop-img img{
+            width: 90%;
+            box-shadow: -20px -20px 0px #2C5364;
+            animation: exa1 2s ease-out infinite;
+
+        }
+        @keyframes exa1{
+            0%{
+                box-shadow: -20px -20px 0px #2C5364;
+  
+            }
+            
+            100%{
+                box-shadow: 20px 20px 0px #00f7ff;
+
+            }
+            
+        }
+        .content-shop {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+           
+
+        }
+        .content-shop h1{
+            color: rgb(17, 15, 15);
+            font-weight: bolder;
+            font-family: Inter;
+            margin-bottom: 5%;
+            filter: drop-shadow(-2px -2px 0px #00fff2);
+            animation: exa 2s infinite;
+            word-spacing: 35px;
+        }
+        @keyframes exa {
+            0%{
+                /* filter: drop-shadow(-2px -2px 3px #2C5364) */
+                word-spacing: 35px;
+            }
+            25%{
+                /* filter: drop-shadow(-2px -2px 3px #429dc4) */
+                word-spacing: 25px;
+            }
+            50%{
+                /* filter: drop-shadow(-2px -2px 3px #1cdbab) */
+                word-spacing: 15px;
+            }
+            75%{
+                /* filter: drop-shadow(-2px -2px 3px #00fff2) */
+                word-spacing: 5px;
+            }
+            100%{
+                /* filter: drop-shadow(-2px -2px 3px green)
+                word-spacing: 0px; */
+            }
+            
+        }
+        
+        
+        .content-shop p{
+            color: grey;
+            width: 70%;
+text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .content-shop a i{
+            font-size: 250%;
+            margin-left: 18px;
+            transition: all 0.2s ease;
+            
+        }
+        .content-shop a:nth-child(1) i:hover{
+            color: rgb(86, 255, 8);
+            transform: translateY(-8px);
+        }
+        .content-shop a:nth-child(2) i:hover{
+            color:hotpink;
+            transform: translateY(-8px);
+            
+        }
+        .content-shop a:nth-child(3) i:hover{
+            color:blue;
+            transform: translateY(-8px);
+            
+        }
+        @media screen and (max-width:647px) {
+            .services{
+                grid-template-columns: 25% 25%;
+            }
+            .services button{
+                margin-bottom: 15%;
+            }
+            .about{
+                margin-bottom: 20%;
+            }
+            .about ~ hr{
+                margin: 15% 0;
+            }
+            .about{
+                grid-template-columns: repeat(1,1fr);
+                padding: 5% 0;
+            }
+            .shop-img{
+                padding: 5% 0;
+            }
+            .icons{
+               display: none;
+        }
+        .haii{
+            margin: 0;
+        }
+            
+        }
+        hr{
+            margin-bottom: 5%;
+            height: 10px ;
+            background: linear-gradient(#0F2027,#00f7ff,#2C5364);
+        }
+       
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <input type="checkbox" name="check" id="check">
+        <label for="check"><i class='bx bx-menu' style="text-align: left;" ></i></label>
+        <ul class="Nav">
+            <li class="items"><a href="button.html">Home</a></li>
+            <li class="items"><a href="service.html">Serivces</a></li> 
+            <li class="items"><a href="about.html">About Us</a></li> 
+            <li class="items"><a href="collection.html">Collection</a></li> 
+            <li class="items"><a href="contact.html">Contact</a></li> 
+
+
+        </ul>
+        <div class="log" style="font-family: Rock Salt;font-weight: bold;">
+            WATCHY WATCH
+            </div>
+
+    </div>
+    <div class="container" >
+
+</div>
+    </div>
+    <hr>
+    <h1 style="text-align: center;" class="haii">OUR SERVICES</h1>
+    <div class="about">
+        <div class="shop-img">
+            
+<img src="https://dev1-cdn.helioswatchstore.com/magespacex/storepickup/images/store/gallery/p/h/photo_2021-11-10_18-54-23_-_helios_-_pandian_street_-_velachery.jpg" alt="">
+        </div>
+        <div class="content-shop">
+            <h1>About Our Shop <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#75FBFD"><path d="M340-800h120-120Zm0 640h120-120Zm420-120v-80h80v80h-80Zm0-160v-80h120v80H760Zm0-160v-81h160v81H760ZM280-80l-54-182q-48-38-77-95t-29-123q0-66 29-123t77-95l54-182h240l54 182q48 38 77 95t29 123q0 66-29 123t-77 95L520-80H280Zm120-200q83 0 141.5-58.5T600-480q0-83-58.5-141.5T400-680q-83 0-141.5 58.5T200-480q0 83 58.5 141.5T400-280Zm-76-470q20-5 38.5-8t37.5-3q19 0 37.5 3t38.5 8l-16-50H340l-16 50Zm16 590h120l16-50q-20 5-38.5 7.5T400-200q-19 0-37.5-2.5T324-210l16 50Z"/></svg></h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur reiciendis distinctio eos deserunt exercitationem sed numquam tempora repellat a unde. Ducimus perferendis architecto tempora obcaecati maiores asperiores deserunt quam quidem quas ab, sit itaque debitis vitae eveniet expedita adipisci. Beatae repellat facilis quisquam nostrum nesciunt laboriosam accusantium est voluptates dolore?</p>
+            
+            <br><br><div class="icons">
+                <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>   
+            <a href="#"><i class='bx bx-current-location'></i></a> 
+       
+        </div>
+
+        </div>
+        
+    </div>
+    
+    <div class="empty" >
+        
+    </div>
+    
+    <footer>
+        <div class="social-media">
+    <strong>Social Media</strong><br><br>
+    <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+    <a href="#"><i class='bx bxl-facebook-square'></i></a>
+    <a href="#"><i class='bx bxl-telegram' ></i></a>
+    <a href="#"><i class='bx bxl-whatsapp' ></i></a>
+    <a href="#"><i class='bx bxl-twitter' ></i></a>
+        </div>
+        <div class="terms">
+            <strong>Legal Information</strong><br><br>
+            <ul style="list-style: none;color: grey;line-height:150%;">
+                <li>Privacy Policy
+                    </li>
+                    <li>Terms of Service
+                        </li>
+                        <li>
+                            Disclaimer
+                        </li>
+            </ul>
+    
+        </div>
+           </div>
+        <div class="quick-link">
+            <strong>Quick Link</strong><br><br>
+            <ul style="list-style: none;color: grey; line-height:150%;">
+               <li>About Us</li>
+               <li>Services</li>
+               <li>Blog</li>
+               <li>Contact us</li>
+               <li>FAQs</li> 
+    
+    
+     
+    
+            </ul>
+    
+        </div>
+    </footer>
+</body>
+</html>

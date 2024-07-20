@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WATCHY WATCH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcxfKgxzB0_L4F1e0_eLT29A7xs9t4oirX3g&s">
+    <link rel="stylesheet" href="boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <head>
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <!-- or -->
+        <link rel="stylesheet"
+        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+      </head>
+   <style>
+       
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header{
+            padding: 0 5%;
+            border-radius: 25px;
+            top: 5%;
+            right: 5%;
+            bottom: 85%;
+            left: 5%;
+            position: fixed;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background-color: whitesmoke;
+            align-items: center;
+            z-index: 112;
+        
+            
+        }
+        .Nav{
+           
+           justify-content: space-between;
+        list-style: none;
+        display: flex;
+        
+        }
+        .Nav li a{
+            border-bottom: 3px solid black transparent;
+            transition:all 0.15s linear;
+            font-weight: bolder;
+        }
+        .Nav li a:hover{
+            color: rgb(124, 119, 119);
+           padding-left: 5%;
+           
+            border-bottom: 1px solid black;
+            
+            
+        }
+        a{
+            text-decoration: none;
+            font-family: verdana;
+            color: black;
+            
+
+        }
+        .log{
+            margin: 0 auto;
+
+        }
+        label{
+            display: none;
+        }
+        input[type="checkbox"]{
+            display: none;
+           
+        }
+
+        @media  screen and (max-width:596px) {
+            label{
+                text-align: right;
+                display: contents;
+                cursor: pointer;
+                
+            }
+            .Nav{
+                position: fixed;
+                flex-direction: column;
+                background-color: white;
+                padding: 3% 5%;
+                top: 17%;
+                
+                opacity: 0;
+                visibility: hidden;
+                z-index: 0;
+                transition: all 0.2s ease;
+                border-radius:5px;
+                
+                
+            }
+           .Nav li {
+            line-height: 200%;
+            margin-bottom:1rem;
+            }
+            #check:checked ~ .Nav{
+                visibility: visible;
+               opacity: 1;
+                z-index: 110;
+                
+            }
+            
+        }
+        .container{
+           background: linear-gradient(#0F2027,#203A43,#2C5364);
+            height: 30vh;
+            width: 100%;
+            display: grid;
+            grid-template-columns:repeat(2,1fr) ;
+            
+            margin: 0 auto;
+        }
+        .photo,.text{
+
+
+        
+            position: relative;
+        }
+        .abs,.img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%); 
+        }
+        .abs h2,h3,h4,h5{
+            font-family:Kanit;
+            font-size: xx-large;
+        }
+        .abs button{
+            margin: 15px 15px 0 0;
+            width: 150px;
+            height: 55px;
+            border-radius: 25px 0 25px 0;
+            display: inline;
+            border: none;
+            background-color: white;
+            font: 1rem poppins;
+            color: #203A43;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+        .abs button:nth-child(even){
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        .abs button:nth-child(even):hover{
+            color: #203A43;
+            background-color: white;
+        }
+        .img img{
+            width: 100%;
+
+        }
+       
+        @media screen and (max-width:647px) {
+            .container{
+                grid-template-columns: 1fr;
+                
+                
+            }
+            .abs h2,h3,h4,h5{
+                font-size: 2.5rem;
+            }
+            .abs{
+                top:40%;
+                left: 15%;
+               transform: translate(0%,0%);
+               z-index: 100;
+            }
+           .img{
+            margin:8% 0;
+           }
+        }
+        .services{
+            height: ;
+            display: grid;
+            padding: 5% 0;
+            grid-template-columns: 20% 20% 20% 20%;
+            justify-content: space-around;
+        }
+        .serve{
+            text-align: center;
+            
+        }
+        .serve i{
+            font-size: 300%;
+            transition: all 0.28s ease;
+        }
+        .serve h6{
+            font-size: large;
+            font-weight: bold;
+            font-family: var(--edu--);
+        }
+        .serve p{
+            font-family: var(--rob--);
+            color: grey;
+            
+        }
+        .serve button{
+            margin-top: 10%;
+        }
+        .serve button{
+            font:14px poppins;
+            white-space: nowrap;
+            padding: 5% 5%;
+            border: 2px solid #28dbd2;
+            background-color: white;
+            border-radius:25px ;
+            cursor: pointer;
+            transition: all 0.28s linear;
+        }
+        .serve button:hover{
+            color: white;
+            background-color: #28dbd2;
+            font-weight: bold;
+            transform: translateX(5%);
+        }
+        .serve:nth-of-type(2) i:hover{
+            color: yellowgreen;
+            transform: translateY(-5%);
+        }
+        .serve:nth-of-type(1) i:hover{
+            color: red;
+            transform: translateY(-5%);
+        }  .serve:nth-of-type(3) i:hover{
+            color: green;
+            transform: translateY(-5%);
+        }  .serve:nth-of-type(4) i:hover{
+            color: blue;
+            transform: translateY(-5%);
+        }        
+       
+        
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <input type="checkbox" name="check" id="check">
+        <label for="check"><i class='bx bx-menu' style="text-align: left;" ></i></label>
+        <ul class="Nav">
+            <li class="items"><a href="button.html">Home</a></li>
+            <li class="items"><a href="service.html">Serivces</a></li> 
+            <li class="items"><a href="about.html">About Us</a></li> 
+            <li class="items"><a href="collection.html">Collection</a></li> 
+            <li class="items"><a href="contact.html">Contact</a></li> 
+
+
+        </ul>
+        <div class="log" style="font-family: Rock Salt;font-weight: bold;">
+            WATCHY WATCH
+            </div>
+
+    </div>
+    <div class="container" >
+
+</div>
+    </div>
+    <hr>
+    <h1 style="text-align: center;" class="haii">OUR SERVICES</h1>
+    <div class="services">
+        <div class="serve">
+            <i class='bx bxs-truck'></i>
+            <h6>FAST DELIVERY</h6><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, placeat?</p>
+            <button>Learn more</button>
+        </div>
+        <div class="serve">
+            <i class='bx bx-money-withdraw'></i>
+            <h6>FREE SHIPPING</h6><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, placeat?</p>
+            <button>Learn more</button>
+        </div>
+        <div class="serve">
+            <i class='bx bxs-check-square'></i>
+            <h6>BEST QUALITY</h6><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, placeat?</p>
+       <button>Learn more</button>
+        </div>
+        <div class="serve">
+           
+            <i class='bx bx-conversation' ></i>
+            <h6>24/7 SERVICE</h6><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, placeat?</p>
+            <button>Learn more</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="social-media">
+    <strong>Social Media</strong><br><br>
+    <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+    <a href="#"><i class='bx bxl-facebook-square'></i></a>
+    <a href="#"><i class='bx bxl-telegram' ></i></a>
+    <a href="#"><i class='bx bxl-whatsapp' ></i></a>
+    <a href="#"><i class='bx bxl-twitter' ></i></a>
+        </div>
+        <div class="terms">
+            <strong>Legal Information</strong><br><br>
+            <ul style="list-style: none;color: grey;line-height:150%;">
+                <li>Privacy Policy
+                    </li>
+                    <li>Terms of Service
+                        </li>
+                        <li>
+                            Disclaimer
+                        </li>
+            </ul>
+    
+        </div>
+           </div>
+        <div class="quick-link">
+            <strong>Quick Link</strong><br><br>
+            <ul style="list-style: none;color: grey; line-height:150%;">
+               <li>About Us</li>
+               <li>Services</li>
+               <li>Blog</li>
+               <li>Contact us</li>
+               <li>FAQs</li> 
+    
+    
+     
+    
+            </ul>
+    
+        </div>
+    </footer>
+</body>
+</html>
